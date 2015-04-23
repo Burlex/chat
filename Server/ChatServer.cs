@@ -43,9 +43,9 @@ namespace Server
     class ChatServer
     {
         // This hash table stores users and connections (browsable by user)
-        public static Hashtable htUsers = new Hashtable(30); // 30 users at one time limit
+        public static Hashtable htUsers = new Hashtable(100); // 100 users at one time limit
         // This hash table stores connections and users (browsable by connection)
-        public static Hashtable htConnections = new Hashtable(30); // 30 users at one time limit
+        public static Hashtable htConnections = new Hashtable(100); // 100 users at one time limit
         // Will store the IP address passed to it
         private IPAddress ipAddress;
         private TcpClient tcpClient;
@@ -77,6 +77,7 @@ namespace Server
 
             // Tell of the new connection to all other users and to the server form
             SendAdminMessage(htConnections[tcpUser] + " has joined us");
+
         }
 
         // Remove the user from the hash tables
@@ -104,7 +105,7 @@ namespace Server
                 statusHandler(null, e);
             }
         }
-
+        
         // Send administrative messages
         public static void SendAdminMessage(string Message)
         {

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.txtLog = new System.Windows.Forms.TextBox();
-            this.txtUserOnline = new System.Windows.Forms.TextBox();
             this.txtIp = new System.Windows.Forms.TextBox();
             this.txtPort = new System.Windows.Forms.TextBox();
             this.bConnect = new System.Windows.Forms.Button();
@@ -38,6 +37,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.bClose = new System.Windows.Forms.Button();
             this.txtUser = new System.Windows.Forms.TextBox();
+            this.userOnline = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // txtLog
@@ -47,14 +47,6 @@
             this.txtLog.Name = "txtLog";
             this.txtLog.Size = new System.Drawing.Size(434, 302);
             this.txtLog.TabIndex = 0;
-            // 
-            // txtUserOnline
-            // 
-            this.txtUserOnline.Location = new System.Drawing.Point(452, 50);
-            this.txtUserOnline.Multiline = true;
-            this.txtUserOnline.Name = "txtUserOnline";
-            this.txtUserOnline.Size = new System.Drawing.Size(120, 302);
-            this.txtUserOnline.TabIndex = 1;
             // 
             // txtIp
             // 
@@ -123,11 +115,20 @@
             this.txtUser.Size = new System.Drawing.Size(95, 20);
             this.txtUser.TabIndex = 9;
             // 
+            // userOnline
+            // 
+            this.userOnline.FormattingEnabled = true;
+            this.userOnline.Location = new System.Drawing.Point(452, 50);
+            this.userOnline.Name = "userOnline";
+            this.userOnline.Size = new System.Drawing.Size(123, 303);
+            this.userOnline.TabIndex = 10;
+            // 
             // Chat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 444);
+            this.Controls.Add(this.userOnline);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.bClose);
             this.Controls.Add(this.comboBox1);
@@ -136,7 +137,6 @@
             this.Controls.Add(this.bConnect);
             this.Controls.Add(this.txtPort);
             this.Controls.Add(this.txtIp);
-            this.Controls.Add(this.txtUserOnline);
             this.Controls.Add(this.txtLog);
             this.Name = "Chat";
             this.Text = "Face Palm";
@@ -148,7 +148,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtLog;
-        private System.Windows.Forms.TextBox txtUserOnline;
         private System.Windows.Forms.TextBox txtIp;
         private System.Windows.Forms.TextBox txtPort;
         private System.Windows.Forms.Button bConnect;
@@ -157,6 +156,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button bClose;
         private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.ListBox userOnline;
     }
 }
 
