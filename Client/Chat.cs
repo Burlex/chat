@@ -186,5 +186,15 @@ namespace Client
                 SendMessage();
             }
         }
+
+        private void bClose_Click(object sender, EventArgs e)
+        {
+            TcpListener closeConn;
+            int portNum = Convert.ToInt32(txtPort.Text);
+            IPAddress ipAddr = IPAddress.Parse(txtIp.Text);
+            closeConn = new TcpListener(ipAddr, portNum);
+            closeConn.Stop();
+            Close();
+        }
     }
 }

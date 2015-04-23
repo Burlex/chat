@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.txtLog = new System.Windows.Forms.TextBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtUserOnline = new System.Windows.Forms.TextBox();
             this.txtIp = new System.Windows.Forms.TextBox();
             this.txtPort = new System.Windows.Forms.TextBox();
             this.bConnect = new System.Windows.Forms.Button();
@@ -37,6 +37,7 @@
             this.bSend = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.bClose = new System.Windows.Forms.Button();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtLog
@@ -47,13 +48,13 @@
             this.txtLog.Size = new System.Drawing.Size(434, 302);
             this.txtLog.TabIndex = 0;
             // 
-            // txtUser
+            // txtUserOnline
             // 
-            this.txtUser.Location = new System.Drawing.Point(452, 50);
-            this.txtUser.Multiline = true;
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(120, 302);
-            this.txtUser.TabIndex = 1;
+            this.txtUserOnline.Location = new System.Drawing.Point(452, 50);
+            this.txtUserOnline.Multiline = true;
+            this.txtUserOnline.Name = "txtUserOnline";
+            this.txtUserOnline.Size = new System.Drawing.Size(120, 302);
+            this.txtUserOnline.TabIndex = 1;
             // 
             // txtIp
             // 
@@ -71,7 +72,7 @@
             // 
             // bConnect
             // 
-            this.bConnect.Location = new System.Drawing.Point(239, 12);
+            this.bConnect.Location = new System.Drawing.Point(340, 12);
             this.bConnect.Name = "bConnect";
             this.bConnect.Size = new System.Drawing.Size(97, 32);
             this.bConnect.TabIndex = 4;
@@ -100,9 +101,9 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(342, 19);
+            this.comboBox1.Location = new System.Drawing.Point(443, 18);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(230, 21);
+            this.comboBox1.Size = new System.Drawing.Size(129, 21);
             this.comboBox1.TabIndex = 7;
             // 
             // bClose
@@ -113,12 +114,21 @@
             this.bClose.TabIndex = 8;
             this.bClose.Text = "Close";
             this.bClose.UseVisualStyleBackColor = true;
+            this.bClose.Click += new System.EventHandler(this.bClose_Click);
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(239, 19);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(95, 20);
+            this.txtUser.TabIndex = 9;
             // 
             // Chat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 444);
+            this.ClientSize = new System.Drawing.Size(587, 444);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.bClose);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.bSend);
@@ -126,7 +136,7 @@
             this.Controls.Add(this.bConnect);
             this.Controls.Add(this.txtPort);
             this.Controls.Add(this.txtIp);
-            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.txtUserOnline);
             this.Controls.Add(this.txtLog);
             this.Name = "Chat";
             this.Text = "Face Palm";
@@ -138,7 +148,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtLog;
-        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtUserOnline;
         private System.Windows.Forms.TextBox txtIp;
         private System.Windows.Forms.TextBox txtPort;
         private System.Windows.Forms.Button bConnect;
@@ -146,6 +156,7 @@
         private System.Windows.Forms.Button bSend;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button bClose;
+        private System.Windows.Forms.TextBox txtUser;
     }
 }
 
