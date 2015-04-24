@@ -43,10 +43,11 @@ namespace Server
         {
             // Call the method that updates the form
             this.Invoke(new UpdateStatusCallback(this.UpdateStatus), new object[] { e.EventMessage });
+            
         }
-
+        
         private void UpdateStatus(string strMessage)
-        {
+        {            
             // Updates the log with the message
             txtLog.AppendText(strMessage + "\r\n");
         }
@@ -64,7 +65,7 @@ namespace Server
                 int portNum = Convert.ToInt32(txtPort.Text);
                 IPAddress ipAddr = IPAddress.Parse(txtIp.Text);
                 closeConn = new TcpListener(ipAddr, portNum);
-                closeConn.Stop();                
+                closeConn.Stop(); 
                 //Close();
                 Application.Exit();                
             }

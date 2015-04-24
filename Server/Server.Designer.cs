@@ -33,7 +33,7 @@
             this.btnListen = new System.Windows.Forms.Button();
             this.txtLog = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.clientList = new System.Windows.Forms.ListView();
             this.Rooms = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.UserName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -82,18 +82,18 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // listView1
+            // clientList
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clientList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Rooms,
             this.UserName,
             this.Status});
-            this.listView1.Location = new System.Drawing.Point(263, 50);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(391, 215);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.clientList.Location = new System.Drawing.Point(263, 50);
+            this.clientList.Name = "clientList";
+            this.clientList.Size = new System.Drawing.Size(391, 215);
+            this.clientList.TabIndex = 5;
+            this.clientList.UseCompatibleStateImageBehavior = false;
+            this.clientList.View = System.Windows.Forms.View.Details;
             // 
             // Rooms
             // 
@@ -124,9 +124,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 323);
+            this.ClientSize = new System.Drawing.Size(666, 315);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.clientList);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtLog);
             this.Controls.Add(this.btnListen);
@@ -146,7 +146,7 @@
         private System.Windows.Forms.Button btnListen;
         private System.Windows.Forms.TextBox txtLog;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView clientList;
         private System.Windows.Forms.ColumnHeader Rooms;
         private System.Windows.Forms.ColumnHeader UserName;
         private System.Windows.Forms.ColumnHeader Status;

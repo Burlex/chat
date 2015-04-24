@@ -78,7 +78,7 @@ namespace Server
             // Tell of the new connection to all other users and to the server form
             SendAdminMessage(htConnections[tcpUser] + " has joined us");
 
-        }
+        }       
 
         // Remove the user from the hash tables
         public static void RemoveUser(TcpClient tcpUser)

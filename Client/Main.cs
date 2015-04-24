@@ -189,12 +189,16 @@ namespace Client
 
         private void bClose_Click(object sender, EventArgs e)
         {
-            TcpListener closeConn;
-            int portNum = Convert.ToInt32(txtPort.Text);
-            IPAddress ipAddr = IPAddress.Parse(txtIp.Text);
-            closeConn = new TcpListener(ipAddr, portNum);
-            closeConn.Stop();
+            if (Connected == true)
+            {
+                // Closes the connections, streams, etc.
+                Connected = false;
+                swSender.Close();
+                srReceiver.Close();
+                tcpServer.Close();
+            }        
             Close();
-        }
+
+         }
     }
 }
