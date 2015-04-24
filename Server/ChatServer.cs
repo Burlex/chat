@@ -280,6 +280,7 @@ namespace Server
 
                     // Add the user to the hash tables and start listening for messages from him
                     ChatServer.AddUser(tcpClient, currUser);
+                    
                 }
             }
             else

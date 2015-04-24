@@ -14,7 +14,7 @@ using System.Threading;
 
 namespace Client
 {
-    public partial class Chat : Form
+    public partial class Main : Form
     {
         // Will hold the user name
         private string UserName = "Unknown";
@@ -30,7 +30,7 @@ namespace Client
         private bool Connected;
         public int portNum;
 
-        public Chat()
+        public Main()
         {
             // On application exit, don't forget to disconnect first
             Application.ApplicationExit += new EventHandler(OnApplicationExit);
@@ -179,7 +179,7 @@ namespace Client
         }
 
         private void txtMessage_KeyPress(object sender, KeyPressEventArgs e)
-        {
+        {            
             // If the key is Enter
             if (e.KeyChar == (char)13)
             {

@@ -1,6 +1,6 @@
 ﻿namespace Client
 {
-    partial class Chat
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.bClose = new System.Windows.Forms.Button();
             this.txtUser = new System.Windows.Forms.TextBox();
-            this.userOnline = new System.Windows.Forms.ListBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // txtLog
@@ -79,6 +79,7 @@
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(434, 66);
             this.txtMessage.TabIndex = 5;
+            this.txtMessage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMessage_KeyPress);
             // 
             // bSend
             // 
@@ -115,20 +116,20 @@
             this.txtUser.Size = new System.Drawing.Size(95, 20);
             this.txtUser.TabIndex = 9;
             // 
-            // userOnline
+            // listView1
             // 
-            this.userOnline.FormattingEnabled = true;
-            this.userOnline.Location = new System.Drawing.Point(452, 50);
-            this.userOnline.Name = "userOnline";
-            this.userOnline.Size = new System.Drawing.Size(123, 303);
-            this.userOnline.TabIndex = 10;
+            this.listView1.Location = new System.Drawing.Point(452, 50);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(120, 302);
+            this.listView1.TabIndex = 10;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // Chat
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 444);
-            this.Controls.Add(this.userOnline);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.bClose);
             this.Controls.Add(this.comboBox1);
@@ -138,7 +139,7 @@
             this.Controls.Add(this.txtPort);
             this.Controls.Add(this.txtIp);
             this.Controls.Add(this.txtLog);
-            this.Name = "Chat";
+            this.Name = "Main";
             this.Text = "Face Palm";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -156,7 +157,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button bClose;
         private System.Windows.Forms.TextBox txtUser;
-        private System.Windows.Forms.ListBox userOnline;
+        private System.Windows.Forms.ListView listView1;
     }
 }
 
