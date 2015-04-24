@@ -215,7 +215,7 @@ namespace Server
     }
 
     // This class handels connections; there will be as many instances of it as there will be connected users
-    class Connection
+  class Connection
     {
         TcpClient tcpClient;
         // The thread that will send information to the client

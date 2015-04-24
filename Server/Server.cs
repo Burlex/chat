@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -52,12 +53,27 @@ namespace Server
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            TcpListener closeConn;
-            int portNum = Convert.ToInt32(txtPort.Text);
-            IPAddress ipAddr = IPAddress.Parse(txtIp.Text); 
-            closeConn = new TcpListener(ipAddr, portNum);
-            closeConn.Stop();
-            Close();
+            if (txtIp.Text.Length == 0 || txtPort.Text.Length == 0)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                
+                TcpListener closeConn;
+                int portNum = Convert.ToInt32(txtPort.Text);
+                IPAddress ipAddr = IPAddress.Parse(txtIp.Text);
+                closeConn = new TcpListener(ipAddr, portNum);
+                closeConn.Stop();                
+                //Close();
+                Application.Exit();                
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AboutBox AB = new AboutBox();
+            AB.Show();
         }
     }
 }
