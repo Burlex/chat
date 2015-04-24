@@ -187,7 +187,8 @@ namespace Server
             IPAddress ipaLocal = ipAddress;
 
             // Create the TCP listener object using the IP of the server and the specified port
-            tlsClient = new TcpListener(portNum);
+            //Change for .Net Framework 4.0+
+            tlsClient = new TcpListener(ipaLocal,portNum);
 
             // Start the TCP listener and listen for connections
             tlsClient.Start();
